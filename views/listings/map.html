@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My Free Google Map</title>
+    <style>
+      /* Crucial: Set a size for the map container */
+      #map {
+        height: 500px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>My Free Map</h3>
+
+    <!-- The map will appear inside this box -->
+    <div id="map"></div>
+
+    <script>
+      let map;
+      function initMap() {
+        // Sets the center coordinates (This points to London, UK)
+        const centerPosition = { lat: 51.5074, lng: -0.1278 };
+
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: centerPosition,
+          zoom: 12, // Zoom level (1 is farthest, 20 is closest)
+        });
+
+        // Adds a red marker pin on the map
+        new google.maps.Marker({
+          position: centerPosition,
+          map: map,
+          title: "Hello World!",
+        });
+      }
+    </script>
+
+    <!-- Insert your Demo Key at the very end of the URL below -->
+    <script
+       <script src="https://googleapis.com?key=AIzaSyCbKww-7oL9ZHMAF8pVvACPgSN0ewCpYJY&callback=initMap" async defer></script>
+      async
+      defer
+    ></script>
+  </body>
+</html>
